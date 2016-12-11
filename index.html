@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Master this</h1>
+    <div class="watchers">
+      <span>counter: </span> <span id="counterValue"></span> <a href="#" onclick="counter.count = 0; render();">reset</a> | <a href="#" onclick="counter.intervalCount()">interval</a>
+      <br/>
+      <span>window.count: </span> <span id="windowCount"></span> <a href="#" onclick="window.count = 0;render();">reset</a> | <a href="#" onclick="intervalCount()">interval</a>
+    </div>
+    <div classs="actions">
+      <button type="button" onclick="methodInvocation()">Method</button>
+      <button type="button" onclick="functionInvoke()">Function</button>
+      <button type="button" onclick="functionInvokeStrict()">Function Strict</button>
+      <button type="button" onclick="applyInvocation()">Apply</button>
+      <button type="button" onclick="lexicalAdd(1)">Lexical</button>
+      <button type="button" onclick="lexicalAddStrict(1)">Lexical Strict</button>
+
+
+      <button type="button" onclick="clearLog()">Clear</button>
+    <div id="console"></div>
+
+    </div>
+    <script src="util.js"></script>
+        <script src="script-strict.js"></script>
+    <script src="script.js"></script>
+    <script src="bind.js"></script>
+    <script>render(true);</script>    
+  </body>
+
+</html>
